@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Helpdesk System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+  <div class="app">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>🎧 AI Helpdesk System</h1>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat"><div class="stat-label">Total Tickets</div><div class="stat-value" id="stat-total">0</div></div>
+      <div class="stat"><div class="stat-label">Open</div><div class="stat-value" id="stat-open">0</div></div>
+      <div class="stat"><div class="stat-label">In Progress</div><div class="stat-value" id="stat-inprogress">0</div></div>
+      <div class="stat"><div class="stat-label">Resolved</div><div class="stat-value" id="stat-resolved">0</div></div>
+    </div>
+
+    <!-- Submit Ticket Form -->
+    <div class="section">
+      <div class="section-title">Submit New Ticket</div>
+      <div class="form-row">
+        <input type="text" id="ticket-name" placeholder="Your Name" />
+        <input type="text" id="ticket-email" placeholder="Email Address" />
+      </div>
+      <textarea id="ticket-desc" placeholder="Describe your issue... e.g. My laptop won't connect to WiFi"></textarea>
+      <button class="submit-btn" id="submit-btn" onclick="submitTicket()">
+        ✨ Analyze with AI & Submit
+      </button>
+
+      <!-- AI Result Box -->
+      <div class="ai-result" id="ai-result">
+        <div class="ai-tags" id="ai-tags"></div>
+        <div class="ai-solution" id="ai-solution"></div>
+      </div>
+    </div>
+
+    <!-- Ticket Dashboard -->
+    <div class="section">
+      <div class="section-title">Ticket Dashboard</div>
+      <div class="tickets-list" id="tickets-list">
+        <div class="empty-state">No tickets yet. Submit one above!</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
